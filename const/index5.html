@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function earnings(name,wage=8590, hours=40){
+        //     console.log(`#${name} 님의 급여 정보`)
+        //     console.log(`-시급:${wage}원`)
+        //     console.log(`-근무 시간:${hours}시간`)
+        //     console.log(`급여:${wage*hours}원`)
+        //     console.log('')
+        // }
+        // //최저 임금으로 최대한 일하는 경우
+        // earnings('구름')
+        // //시급 1만원으로 최대한 일하는 경우
+        // earnings('별',10000)
+        // //시급1만원으로 52시간 일한 경우
+        // earnings('인성',10000,52)
+
+        // function isLeapYear(year=new Date().getFullYear()){
+        //     console.log(`매개변수 year:${year}`)
+        //     return (year % 4 ===0)&&(year % 100 !==0) || (year % 400===0)
+        // }
+        // console.log(`올해는 윤년일까요?===${isLeapYear()}`)
+            // arguments는 내부에 callee:f 와 symbol()
+        function sample(){
+            console.log(arguments)
+            for(let i = 0; i< arguments.length; i++) {
+                console.log(`${i}번째 요소: ${arguments[i]}`)
+            }
+        }
+        sample(1,2)
+        sample(1,2,3)
+        sample(1,2,3,4)
+
+        //단순하게 매개변수를 모두 출력하는 함수
+
+    function sample(...items){
+        console.log(items)
+    }
+
+    //전개 연산자 사용 여부 비교하기
+
+const array = [1,2,3,4]
+console.log(sample.apply(null, array))
+
+    </script>
+</body>
+</html>
